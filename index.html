@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfroComposer | Professional Distribution & Marketing Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #050505; color: #e5e5e5; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .accent-text { color: #ffad00; }
+        .accent-bg { background-color: #ffad00; }
+    </style>
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav class="glass p-4 flex justify-between items-center sticky top-0 z-50">
+        <h1 class="text-2xl font-bold accent-text">AFROCOMPOSER HUB</h1>
+        <div class="space-x-6">
+            <a href="#" class="hover:text-amber-500">Dashboard</a>
+            <a href="#" class="hover:text-amber-500">Catalog</a>
+            <a href="#" class="accent-bg text-black px-4 py-2 rounded-full font-bold">Upgrade Pro</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="container mx-auto p-6 mt-10">
+        <section class="text-center mb-16">
+            <h2 class="text-5xl font-extrabold mb-4">Distribute. Master. Monetize.</h2>
+            <p class="text-gray-400">The ultimate platform for independent artists. 100% Free distribution, unlimited downloads, and real-time fan links.</p>
+        </section>
+
+        <!-- Main Hub Grid -->
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Distribution Card -->
+            <div class="glass p-6 rounded-2xl hover:border-amber-500 transition">
+                <i class="fas fa-upload text-3xl accent-text mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Pro Distribution</h3>
+                <p class="text-sm text-gray-400 mb-4">Upload WAV/MP3, manage ISRC/UPC codes, and set royalty splits with collaborators.</p>
+            </div>
+
+            <!-- PushPromo Hub -->
+            <div class="glass p-6 rounded-2xl hover:border-amber-500 transition">
+                <i class="fas fa-share-nodes text-3xl accent-text mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">PushPromo Hub</h3>
+                <p class="text-sm text-gray-400 mb-4">Generate unlimited smart links, pre-save campaigns, and track fan engagement in real-time.</p>
+            </div>
+
+            <!-- SEO & Analytics -->
+            <div class="glass p-6 rounded-2xl hover:border-amber-500 transition">
+                <i class="fas fa-chart-line text-3xl accent-text mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">SEO & Monetization</h3>
+                <p class="text-sm text-gray-400 mb-4">Auto-generate metadata, sitemaps, and Content ID monetization for YouTube & TikTok.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-20 p-10 border-t border-gray-800 text-center text-gray-500">
+        <p>&copy; 2026 AfroComposer Distribution Hub. All Rights Reserved.</p>
+        <p class="text-xs mt-2">Powered by Professional Graphics and Arts Gallery</p>
+    </footer>
+
+    <script>
+        // Placeholder for Push.fm style link generation
+        function generateFanLink(trackId) {
+            const url = `https://afrocomposer.link/${trackId}`;
+            console.log("Generating smart link:", url);
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
