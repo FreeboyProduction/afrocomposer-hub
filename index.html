@@ -73,3 +73,74 @@
     </script>
 </body>
 </html>
+// --- Distribution & Mastering Logic ---
+function distributeTrack() {
+    const title = document.getElementById('trackTitle').value;
+    const output = document.getElementById('output');
+    
+    if(!title) {
+        showToast("Please enter a track title!");
+        return;
+    }
+
+    // Simulate Processing Pipeline
+    output.innerHTML = "<div class='text-amber-500 animate-pulse'>Processing Neural Mastering...</div>";
+    
+    setTimeout(() => {
+        const isrc = "US-AFR-" + Math.floor(100000 + Math.random() * 900000);
+        const upc = "88" + Math.floor(100000000000 + Math.random() * 900000000000);
+        
+        output.innerHTML = `
+            <div class='mt-4 p-4 bg-black rounded border border-amber-900'>
+                <p><strong>Status:</strong> <span class='text-green-500'>Live / Distributed</span></p>
+                <p><strong>ISRC:</strong> ${isrc}</p>
+                <p><strong>UPC:</strong> ${upc}</p>
+                <div class='flex gap-2 mt-3'>
+                    <button class='bg-amber-600 px-3 py-1 rounded text-xs hover:bg-amber-500'>DOWNLOAD WAV</button>
+                    <button class='bg-gray-700 px-3 py-1 rounded text-xs hover:bg-gray-600'>DOWNLOAD MP3</button>
+                </div>
+            </div>
+        `;
+        showToast("Release processed successfully!");
+    }, 2000);
+}
+
+// --- PushPromo Hub Logic ---
+function generateLink() {
+    const artist = document.getElementById('artistName').value || "artist";
+    const linkOutput = document.getElementById('linkOutput');
+    const smartLink = `https://afrocomposer.link/${artist.toLowerCase().replace(/\s/g, '-')}`;
+    
+    linkOutput.innerHTML = `
+        <div class='mt-4 p-4 bg-black rounded border border-blue-900'>
+            <p class='text-xs text-gray-400'>Smart Link Generated:</p>
+            <a href='#' class='text-blue-400 hover:underline font-mono'>${smartLink}</a>
+            <div class='mt-3 text-[10px] text-gray-500 flex justify-between'>
+                <span>Pre-saves: 0</span>
+                <span>Analytics: Live</span>
+            </div>
+        </div>
+    `;
+    showToast("Smart Link generated!");
+}
+
+// --- Monetization & Royalty Logic ---
+function upgradePremium() {
+    alert("Redirecting to Secure Payment Gateway for Pro Membership...");
+}
+
+// --- Utility Toast Notification System ---
+function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'fixed bottom-5 right-5 bg-amber-600 text-black px-6 py-3 rounded-lg font-bold shadow-2xl';
+    toast.innerText = message;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+}
+
+// --- SEO Auto-Injection ---
+document.head.innerHTML += `
+    <meta name="description" content="AfroComposer Distribution Hub: Professional, unlimited free music distribution, neural mastering, and fan-link marketing for independent artists.">
+    <meta property="og:title" content="AfroComposer | Distribution Hub">
+    <meta property="og:type" content="website">
+`;
